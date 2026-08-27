@@ -9,15 +9,15 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
-<!-- ============ TRACKING — STUBBED, ACTIVATE AT LAUNCH ============
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-XXXXXXXXXX"></script>
+<!-- Google Ads tracking (live) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-419463695"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'AW-XXXXXXXXXX', { phone_conversion_number: '(479) 280-7482' });
+  gtag('config', 'AW-419463695');
+  gtag('config', 'AW-419463695/DK03CP_9gukcEI-EgsgB', { 'phone_conversion_number': '(479) 280-7482' });
 </script>
-================================================================== -->
 <style>
 :root{
   --navy:#0E1D2E; --navy-2:#132639; --steel:#1B3450;
@@ -210,11 +210,12 @@ footer .brand{font-family:var(--disp);font-weight:700;letter-spacing:.1em;text-t
     <div class="qcard" id="callback">
       <h3>Not Urgent? Request a Callback</h3>
       <p class="tag">Rolling fine but the light's on? Leave your number.</p>
-      <!-- TODO AT LAUNCH: replace YOUR_WEB3FORMS_KEY with a real key and test-submit once -->
-      <form action="https://api.web3forms.com/submit" method="POST">
-        <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_KEY">
-        <input type="hidden" name="subject" value="Forced regen callback request — landing page">
-        <input type="hidden" name="redirect" value="https://dpfcentralar.vercel.app/thanks.html">
+      <!-- FormSubmit: first real submission emails an activation link to Austin's inbox — he clicks it once -->
+      <form action="https://formsubmit.co/littlerock.ar@dpfalternatives.com" method="POST">
+        <input type="hidden" name="_subject" value="Forced regen callback request — landing page">
+        <input type="hidden" name="_next" value="https://dpfcentralar.vercel.app/thanks.html">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
         <label for="f-name">Name</label>
         <input id="f-name" type="text" name="name" required autocomplete="name">
         <label for="f-phone">Phone</label>

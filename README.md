@@ -37,16 +37,16 @@ Photos of AUSTIN's actual shop/van would still beat these — ask him.
 
 ## MUST DO BEFORE LAUNCH (all currently stubbed)
 
-1. **Web3Forms key** — both forms have `access_key = YOUR_WEB3FORMS_KEY`. Create a key
-   (web3forms.com, needs a delivery email — ask Austin which email gets leads), replace in BOTH
-   forms, and test-submit once. A placeholder key renders fine and silently loses every lead.
-2. **Form redirect URLs** — both forms redirect to `https://REPLACE-AT-DEPLOY/thanks.html`.
-   DONE — set to dpfcentralar.vercel.app.
-3. **gtag** — every page has a commented tracking block with `AW-XXXXXXXXXX`. At launch:
-   create a Google Ads website-call conversion + a form conversion, then uncomment and fill in
-   the AW id + the form conversion label in `thanks.html`. The phone snippet
-   (`phone_conversion_number`) handles call tracking — do NOT also fire tel-click conversions
-   (double-count).
+1. **Forms: FormSubmit.co** (Kennedy: Web3Forms not possible) — both forms POST to
+   formsubmit.co/littlerock.ar@dpfalternatives.com, redirect to thanks.html.
+   ⚠ ACTIVATION PENDING: FormSubmit emails an activation link to that inbox on the first
+   submission — AUSTIN MUST CLICK IT ONCE or no leads deliver. Trigger a test submit, tell
+   Austin to click "Activate", then test again end-to-end.
+2. **Form redirects** — DONE, set to dpfcentralar.vercel.app/thanks.html.
+3. **gtag — LIVE (wired 2026-08-27 via API):** AW-419463695 on all pages.
+   Website-call conversion "Call from landing page" (id 7736442623, 20s, label DK03CP_9gukcEI-EgsgB)
+   via phone snippet; form conversion "Landing page form lead" (id 7736442620, label
+   3MVsCPz9gukcEI-EgsgB) fires on thanks.html. Do NOT add tel-click conversions (double-count).
 4. **Austin's own photos** — franchise stock is in place; swap in his real shop/van/filter
    photos when he sends them (they'll convert better than corporate shots).
 
